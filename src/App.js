@@ -49,6 +49,11 @@ function App() {
     try {
       const response = await fetch("https://api.quicksell.co/v1/internal/frontend-assignment");
       const data = await response.json();
+      
+      if(data){
+        console.log("Data Fetched Successfully");
+      }
+      
       const { tickets, users } = data;
       const tempUsers = users.reduce((acc, user) => {
         acc[user.id] = user;
