@@ -53,12 +53,13 @@ function App() {
       if(data){
         console.log("Data Fetched Successfully");
       }
-      
+
       const { tickets, users } = data;
       const tempUsers = users.reduce((acc, user) => {
         acc[user.id] = user;
         return acc;
       }, {});
+      
       setTickets(tickets);
       setUserData(tempUsers);
     } catch (err) {

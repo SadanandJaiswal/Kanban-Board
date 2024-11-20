@@ -7,7 +7,6 @@ export default function Profile({name,activityStatus}) {
   },[name])
   const colors = ['#ff0000','#0CB44FFF','#F26A02FF','#054EC3FF'];
   const c = colors[Math.floor(Math.random()*colors.length)];
-  // console.log(activityStatus);
   
   return (
     <div className='usericon-container' style={{backgroundColor:c}}>
